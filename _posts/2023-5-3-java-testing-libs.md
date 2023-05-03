@@ -22,6 +22,7 @@ assertThat(actual).contains(2);
 
 ### Awaitility
 Awaitility is a library that allows you to write asynchronous tests in a synchronous style. It provides a simple and concise API that allows you to wait for certain conditions to be met before proceeding with the test. This is particularly useful when testing code that makes use of asynchronous APIs or services.
+
 Example 1: Wait for a specific condition to be true:
 ```java
 await().atMost(Duration.ofSeconds(10)).until(() -> list.size() == 5);
@@ -33,6 +34,7 @@ await().atMost(Duration.ofSeconds(10)).untilAsserted(() -> assertThatThrownBy(()
 ```
 ### Mockito
 Mockito is a popular mocking framework for Java that allows you to create mock objects and stub their behavior. It simplifies the process of mocking dependencies and allows you to write tests that are isolated from external dependencies.
+
 Example 1: Mocking a dependency and setting up its behavior:
 ```java
 SomeDependency mockDependency = mock(SomeDependency.class);
@@ -48,6 +50,7 @@ verify(mockDependency).someMethod("expectedArgument");
 
 ### Wiser
 Wiser is a library that provides a simple way to test email functionality in Java. It provides a mock SMTP server that can be used to test email sending and receiving without the need for an actual email server.
+
 Example 1: Testing email sending:
 ```java
 Wiser wiser = new Wiser();
@@ -70,6 +73,7 @@ wiser.stop();
 
 ### Memoryfilesystem
 Memoryfilesystem is a library that provides an in-memory file system that can be used for testing. It allows you to create files and directories in memory and perform file operations without touching the actual file system.
+
 Example 1: Writing a file to an in-memory file system:
 ```java
 FileSystem fs = MemoryFileSystemBuilder.newEmpty().build();
@@ -88,6 +92,7 @@ assertThat(actual).isEqualTo("example");
 
 ### Wiremock
 Wiremock is a library that provides a mock HTTP server that can be used for testing HTTP clients. It allows you to simulate different responses from the server and test how your code reacts to different scenarios.
+
 Example 1: Setting up a mock HTTP server to return a specific response:
 ```java
 WireMockServer wireMockServer = new WireMockServer(options().port(8080));
